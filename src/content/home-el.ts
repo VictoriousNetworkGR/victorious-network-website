@@ -8,12 +8,12 @@ export const navItemsEl = [
 ] as const;
 
 export const heroEl = {
-  headline: "Το πρώτο AI-driven agency για technology storytelling.",
+  headline: "The first AI-Driven agency for technology storytelling.",
   subline:
-    "Η Victorious Network συνδυάζει Τεχνητή Νοημοσύνη, Δημόσιες Σχέσεις και Marketing ειδικά για καινοτομία, ρομποτική και technology brands που χρειάζονται ορατότητα, κύρος και ισχυρή παρουσία στην αγορά.",
+    "Η Victorious Network είναι η πρώτη εταιρεία στην Ευρώπη που συνδυάζει την Τεχνητή Νοημοσύνη με τις Δημόσιες Σχέσεις και το Marketing — ειδικά για την καινοτομία και τη ρομποτική.",
   motto: "Elevate · Innovate · Triumph",
-  primaryCta: { label: "Επικοινωνήστε μαζί μας", href: "#contact" },
-  secondaryCta: { label: "Οι υπηρεσίες μας", href: "#experiences" },
+  primaryCta: { label: "Οι Υπηρεσίες μας", href: "#experiences" },
+  secondaryCta: { label: "Επικοινωνήστε", href: "#contact" },
 } as const;
 
 export const aboutEl = {
