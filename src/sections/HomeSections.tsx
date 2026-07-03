@@ -41,7 +41,7 @@ export function HomeSections() {
 }
 
 function HeroSection({ content }: { content: typeof hero | typeof heroEl }) {
-  const [beforeAi, afterAi] = content.headline.split("AI-driven");
+  const headlineParts = content.headline.split(/(AI-Driven)/);
 
   return (
     <section
@@ -57,11 +57,15 @@ function HeroSection({ content }: { content: typeof hero | typeof heroEl }) {
       <div className="relative z-20 mx-auto flex min-h-[calc(100svh-9rem)] max-w-7xl items-center px-5 sm:px-6 lg:px-8">
         <SectionReveal className="w-full py-12 lg:py-16">
           <h1 className="max-w-[54rem] font-serif text-5xl font-medium leading-[0.9] text-paper sm:text-7xl lg:text-[5.4rem] xl:text-[6.4rem]">
-            {beforeAi}
-            <span className="bg-gradient-to-r from-champagne via-gold to-[#8d6c22] bg-clip-text italic text-transparent">
-              AI-driven
-            </span>
-            {afterAi}
+            {headlineParts.map((part, index) =>
+              part === "AI-Driven" ? (
+                <span key={`${part}-${index}`} className="bg-gradient-to-r from-champagne via-gold to-[#8d6c22] bg-clip-text italic text-transparent">
+                  {part}
+                </span>
+              ) : (
+                part
+              ),
+            )}
           </h1>
           <p className="mt-7 max-w-xl text-base leading-7 text-platinum/72 sm:text-lg sm:leading-8">
             {content.subline}
