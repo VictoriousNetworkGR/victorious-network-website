@@ -20,9 +20,9 @@ export const navItems = [
 
 // HERO
 export const hero = {
-  headline: "The first AI-Driven agency for technology storytelling.",
+  headline: "The AI-driven agency for technology storytelling.",
   subline:
-    "Victorious Network is the first agency in Europe that combines Artificial Intelligence with Public Relations and Marketing — specifically for innovation and robotics.",
+    "Victorious Network designs AI experiences, media productions, robotics activations and strategic communication that turn technology into cultural and commercial impact.",
   motto: "Elevate · Innovate · Triumph",
   primaryCta: { label: "Our Services", href: "#experiences" },
   secondaryCta: { label: "Brief us", href: "#contact" },
