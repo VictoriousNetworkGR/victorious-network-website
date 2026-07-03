@@ -6,6 +6,11 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 
 const signalsEn = ["AI Storytelling", "Robotics", "Media", "Culture", "Market Impact"];
 const signalsEl = ["AI Αφήγηση", "Ρομποτική", "Media", "Πολιτισμός", "Αντίκτυπος"];
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/victoriousnetwork/" },
+  { label: "Instagram", href: "https://www.instagram.com/victorious.network/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/victorious-network/posts/?feedView=all" },
+] as const;
 
 export function SiteFooter() {
   const { language } = useLanguage();
@@ -67,9 +72,26 @@ export function SiteFooter() {
           <div>
             <p className="text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-gold">{greek ? "Επικοινωνία" : "Contact"}</p>
             <a href="mailto:info@victoriousnetwork.com" data-cursor="Email" className="mt-6 block font-serif text-xl text-paper transition hover:text-gold">info@victoriousnetwork.com</a>
+            <a href="tel:+302111820195" className="mt-3 block text-sm text-platinum/58 transition hover:text-gold">+30 211 182 0195</a>
+            <p className="mt-3 text-sm leading-6 text-platinum/48">
+              {greek ? "Παρ. Λεωφόρου Κηφισού 54, Αθήνα 104 42" : "54 Kifisou Ave. Side Road, Athens 104 42"}
+            </p>
             <p className="mt-4 max-w-xs text-sm leading-6 text-platinum/48">
               {greek ? "AI επικοινωνία, ρομποτική και στρατηγική ορατότητα για technology brands." : "AI communications, robotics and strategic visibility for technology brands."}
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-gold/20 px-3 py-2 text-[0.62rem] uppercase tracking-[0.16em] text-platinum/50 transition hover:border-gold/60 hover:text-gold"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
